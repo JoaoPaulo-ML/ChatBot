@@ -35,4 +35,4 @@ INSERT INTO estoque_peixes (nome, quantidade) VALUES (?, ?)
 conexao.commit()
 conexao.close()
 
-print("Banco de dados 'pescaria.db' criado e populado com sucesso!")
+print("Banco de dados 'pescaria.db' criado com sucesso!")
