@@ -90,7 +90,7 @@ Instale as dependências do Python:
 ```bash
 pip install fastapi uvicorn google-genai python-dotenv pytest httpx
 ```
-#### Crie e popule o banco de dados inicial (Opicional), pq o banco já está inserido:
+#### Crie e popule o banco de dados inicial:
 ```bash
 python database.py
 ```
