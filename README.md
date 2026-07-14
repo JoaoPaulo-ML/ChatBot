@@ -79,11 +79,15 @@ Crie e ative o ambiente virtual:
 #### No Windows
 ```bash
 python -m venv venv
+```
+```bash
 venv\Scripts\activate
 ```
 #### No Linux/Mac
 ```bash
 python3 -m venv venv
+```
+```bash
 source venv/bin/activate
 ```
 Instale as dependências do Python:
