@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware  
 from pydantic import BaseModel
 from google import genai
 import sqlite3
@@ -6,10 +7,17 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-
 CHAVE_API = os.getenv("GEMINI_API_KEY")
 
 app = FastAPI(title="Chatbot de Pescaria - API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],  
+    allow_headers=["*"],
+)
 
 client = genai.Client(api_key=CHAVE_API)
 
