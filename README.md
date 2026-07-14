@@ -36,28 +36,30 @@ Crie um arquivo chamado .env na pasta raiz do projeto e adicione a sua chave da 
 ```bash
 GEMINI_API_KEY=sua_chave_secreta_aqui
 ```
-Crie e popule o banco de dados inicial (Opicional), pq o banco já está inserido:
-```bash
-python database.py
-```
 
 ### 1. Preparando o Backend (Python)
 
 Abra o terminal na pasta raiz do projeto e siga os passos:
 
 Crie e ative o ambiente virtual:
+
+#### No Windows
 ```bash
-# No Windows
 python -m venv venv
 venv\Scripts\activate
-
-# No Linux/Mac
+```
+#### No Linux/Mac
+```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 Instale as dependências do Python:
 ```bash
 pip install fastapi uvicorn google-genai python-dotenv pytest httpx
+```
+#### Crie e popule o banco de dados inicial (Opicional), pq o banco já está inserido:
+```bash
+python database.py
 ```
 ### 2. Preparando o Frontend (React)
 Abra outro terminal, navegue até a pasta do frontend e instale as dependências:
@@ -83,5 +85,7 @@ Este projeto inclui testes automatizados (Testes Unitários de Banco de Dados e 
 ```bash
 pytest
 ```
+## ⚠️ Nota Importante sobre os Testes:
+Se o seu terminal retornar um erro AssertionError: {'detail': "429 RESOURCE_EXHAUSTED... durante os testes, isso não é um erro do código! A camada gratuita da API do Gemini possui um limite de requisições por minuto. Aguarde cerca de 10 a 15 segundos e rode o comando pytest novamente.
 
 
