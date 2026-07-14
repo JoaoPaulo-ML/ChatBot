@@ -1,3 +1,35 @@
-.env
+# =========================
+# Backend (Python/FastAPI)
+# =========================
+
+# Ambientes Virtuais
 venv/
+env/
+
+# Variáveis de Ambiente (SEGURANÇA - Nunca apague esta linha)
+.env
+
+# Cache do Python e do Pytest (Arquivos inúteis gerados automaticamente)
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Banco de dados SQLite
+*.db
+
+# =========================
+# Frontend (React/Vite)
+# =========================
+
+# Dependências do Node 
+node_modules/
+frontend/node_modules/
+
+# Pastas de build geradas pelo Vite
+dist/
+dist-ssr/
+
+# Arquivos de log do npm
+npm-debug.log*
