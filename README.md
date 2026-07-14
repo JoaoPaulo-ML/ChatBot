@@ -17,6 +17,39 @@ Um sistema (Fullstack) de chatbot desenvolvido para um teste técnico. O sistema
 * Axios (Requisições HTTP)
 * CSS puro para estilização responsiva
 
+## 🏗️ Modelagem da Tabela: `estoque_peixes`
+
+A tabela é responsável por armazenar a variedade de peixes disponíveis na peixaria e o controle em tempo real de suas respectivas quantidades em estoque.
+
+### Estrutura de Colunas (Dicionário de Dados)
+
+| Nome da Coluna | Tipo de Dado | Restrições / Atributos | Descrição |
+| :--- | :--- | :--- | :--- |
+| **id** | `INTEGER` | `PRIMARY KEY`, `AUTOINCREMENT` | Identificador único e exclusivo de cada peixe no banco de dados. |
+| **nome** | `TEXT` | `NOT NULL` | Nome popular do peixe pantaneiro. |
+| **quantidade** | `INTEGER` | `NOT NULL` | Quantidade disponível em estoque (em unidades ou kg). |
+
+---
+
+## 📈 Carga Inicial de Dados (Seed)
+
+O script de inicialização (`database.py`) limpa a tabela para evitar duplicidade e realiza a inserção dos 10 peixes pantaneiros mais comercializados na região de Corumbá/MS.
+
+Abaixo estão os dados inseridos por padrão na tabela `estoque_peixes`:
+
+| ID | Nome do Peixe | Quantidade Inicial em Estoque |
+| :---: | :--- | :---: |
+| 1 | Pacu | 150 |
+| 2 | Pintado | 85 |
+| 3 | Dourado | 40 |
+| 4 | Cachara | 60 |
+| 5 | Curimbatá | 200 |
+| 6 | Piapara | 120 |
+| 7 | Piau | 180 |
+| 8 | Traíra | 90 |
+| 9 | Barbado | 35 |
+| 10 | Jaú | 15 |
+
 ---
 
 ## 📋 Pré-requisitos (Requisitos do Sistema)
