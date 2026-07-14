@@ -33,7 +33,7 @@ def test_rota_chat_integracao():
     
     response = client.post("/chat", json=payload)
     
-    assert response.status_code == 200
+    assert response.status_code == 200, response.json()
     
     dados_resposta = response.json()
     
