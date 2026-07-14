@@ -113,11 +113,18 @@ Na pasta frontend, execute:
 ```bash
 npm run dev
 ```
+## 📄 Documentação da API (Swagger)
+
+Abaixo está a interface do Swagger gerada para este projeto:
+
+![Documentação Swagger da API](swagger.png)
+
 ## 🧪 Como Rodar os Testes
 Este projeto inclui testes automatizados (Testes Unitários de Banco de Dados e Testes de Integração de API). Para executá-los, certifique-se de que o ambiente virtual está ativado e, na pasta raiz, execute:
 ```bash
 pytest
 ```
+
 ## ⚠️ Nota Importante sobre os Testes:
 Se o seu terminal retornar um erro AssertionError: {'detail': "429 RESOURCE_EXHAUSTED... durante os testes, isso não é um erro do código! A camada gratuita da API do Gemini possui um limite de requisições por minuto. Aguarde cerca de 10 a 15 segundos e rode o comando pytest novamente.
 
